@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Print the alphabet in lowercase and upper case.
+ * main - Print the alphabet in lowercase except 'e' and 'q'.
  * Return: Always 0 (succed).
  */
 int main(void)
@@ -9,13 +9,11 @@ int main(void)
 
 	while (ch <= 'z')
 	{
-		putchar(ch++);
-	}
-	ch = 'A';
-
-	while (ch <= 'Z')
-	{
-		putchar(ch++);
+		if (ch != 'q' && ch != 'e')
+		{
+			putchar(ch);
+		}
+		ch++;
 	}
 	putchar('\n');
 	return (0);
