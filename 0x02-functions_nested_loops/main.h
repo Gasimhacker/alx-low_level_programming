@@ -60,3 +60,9 @@ int print_last_digit(int n);
  * Return: Always void.
  */
 void jack_bauer(void);
+
+/**
+ * times_table - Print the 9 times table, starting with 0.
+ * Return: Always void.
+ */
+void times_table(void);
