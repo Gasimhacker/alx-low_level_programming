@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -13,7 +15,8 @@ int _putchar(char c);
 void print_alphabet(void);
 
 /**
- * print_alphabet_x10 - Print 10 times the alphabet, in lowercase, followed by a new line
+ * print_alphabet_x10 - Print 10 times the alphabet,
+ * in lowercase, followed by a new line
  * Return: Always void.
  */
 void print_alphabet_x10(void);
@@ -83,3 +86,14 @@ int add(int n1, int n2);
  * Return: Always void.
  */
 void print_to_98(int n);
+
+/**
+ * print_times_table - Print the n times table, starting with 0.
+ * @n: The number used to print the times table.
+ * If n is greater than 15 or less than 0:
+ * the function should not print anything
+ *
+ * Return: Always void.
+ */
+void print_times_table(int n);
+#endif
