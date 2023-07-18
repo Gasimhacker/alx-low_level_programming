@@ -31,3 +31,10 @@ int _islower(int c);
  * Return: 1 if c is a letter 0 otherwise.
  */
 int _isalpha(int c);
+
+/**
+ * print_sign - Print the sign of a number.
+ * @n: The number to check
+ * Return: 1 if n is positive, 0 if n is zero, -1 if n is negative.
+ */
+int print_sign(int n);
