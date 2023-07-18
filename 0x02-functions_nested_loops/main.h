@@ -6,13 +6,21 @@
  */
 int _putchar(char c);
 
-/*
+/**
  * print_alphabet - Print the alphabet, in lowercase, followed by a new line
  * Return: Always void.
  */
 void print_alphabet(void);
 
-/* print_alphabet_x10 - Print 10 times the alphabet, in lowercase, followed by a new line
+/**
+ * print_alphabet_x10 - Print 10 times the alphabet, in lowercase, followed by a new line
  * Return: Always void.
  */
 void print_alphabet_x10(void);
+
+/**
+ * _islower - Check for lowercase character.
+ * @c: The character to check
+ * Return: 1 if c is lowercase 0 otherwise.
+ */
+int _islower(int c);
