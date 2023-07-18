@@ -24,3 +24,10 @@ void print_alphabet_x10(void);
  * Return: 1 if c is lowercase 0 otherwise.
  */
 int _islower(int c);
+
+/**
+ * _isalpha - Check for alphabetic character.
+ * @c: The character to check
+ * Return: 1 if c is a letter 0 otherwise.
+ */
+int _isalpha(int c);
