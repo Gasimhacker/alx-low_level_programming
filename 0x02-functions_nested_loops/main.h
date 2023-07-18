@@ -75,3 +75,11 @@ void times_table(void);
  * Return: The result of the addition.
  */
 int add(int n1, int n2);
+
+/**
+ * print_to_98 - Print all natural numbers from n to 98.
+ * @n: The number to start to count from it.
+ *
+ * Return: Always void.
+ */
+void print_to_98(int n);
