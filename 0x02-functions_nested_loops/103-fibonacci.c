@@ -7,7 +7,6 @@
 int main(void)
 {
 	long int fib1 = 0, fib2 = 1, sum = 0, even_sum = 0;
-	int count;
 
 	while (sum <= 4000000)
 	{
