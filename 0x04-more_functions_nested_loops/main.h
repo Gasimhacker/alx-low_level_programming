@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -65,5 +66,12 @@ void print_line(int n);
  * Return: Always void
  */
 void print_diagonal(int n);
+
+/**
+ * print_square - Draw a square in the terminal
+ * @size: The size of the square
+ * Return: Always void
+ */
+void print_square(int size);
 
 #endif
