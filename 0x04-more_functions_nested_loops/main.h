@@ -74,4 +74,11 @@ void print_diagonal(int n);
  */
 void print_square(int size);
 
+/**
+ * print_triangle - Draw a triangle in the terminal
+ * @size: The size of the triangle
+ * Return: Always void
+ */
+void print_triangle(int size);
+
 #endif
