@@ -12,6 +12,10 @@
 
 void print_remaining_days(int month, int day, int year)
 {
+	if (day <= 31 && month > 1)
+	{
+		day = convert_day(month, day);
+	}
 	if (year % 4 == 0)
 	{
 		if (month > 2 && day > 60)
