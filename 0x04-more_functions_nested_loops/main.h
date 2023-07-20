@@ -37,4 +37,12 @@ int mul(int a, int b);
  */
 void print_numbers(void);
 
+/**
+ * print_most_numbers - Print the numbers, from 0 to 9,
+ *                      but not 2 or 4
+ *                      followed by a new line
+ * Return: Always void.
+ */
+void print_most_numbers(void);
+
 #endif
