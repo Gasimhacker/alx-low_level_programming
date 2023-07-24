@@ -44,7 +44,7 @@ void _puts(char *str);
 
 /**
  * print_rev - Print a string, in reverse
- * 	       followed by a new line, to stdout
+ *	       followed by a new line, to stdout
  * @s: The string to be printed
  * Return: void
  */
