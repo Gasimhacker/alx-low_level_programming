@@ -57,5 +57,11 @@ void print_rev(char *s);
  */
 void rev_string(char *s);
 
+/**
+ * puts2 - Print every other character of a string
+ * @str: The string to print from it
+ * Return: void
+ */
+void puts2(char *str)
 
 #endif
