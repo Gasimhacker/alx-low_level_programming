@@ -62,6 +62,6 @@ void rev_string(char *s);
  * @str: The string to print from it
  * Return: void
  */
-void puts2(char *str)
+void puts2(char *str);
 
 #endif
