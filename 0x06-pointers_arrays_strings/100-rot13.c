@@ -18,11 +18,9 @@ char *rot13(char *str)
 			    (str[index] >= 'a' && str[index] <= 'm'))
 			{
 				str[index++] += 13;
+				continue;
 			}
-			else
-			{
-				str[index++] -= 13;
-			}
+			str[index++] -= 13;
 		}
 
 		index++;
