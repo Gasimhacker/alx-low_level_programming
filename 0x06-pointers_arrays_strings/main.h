@@ -73,8 +73,17 @@ char *cap_string(char *str);
  * leet - Encode a string
  * @str: The string to be encoded
  *
- * Return : A pointer to the modified string
+ * Return: A pointer to the modified string
  */
 char *leet(char *str);
+
+/**
+ * rot13 - Encode a string using rot 13
+ * @str: The string to be encoded
+ *
+ * Return: A pointer to the modified string
+ */
+char *rot13(char *str);
+
 
 #endif
