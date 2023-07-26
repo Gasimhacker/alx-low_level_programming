@@ -69,4 +69,12 @@ char *string_toupper(char *str);
  */
 char *cap_string(char *str);
 
+/**
+ * leet - Encode a string
+ * @str: The string to be encoded
+ *
+ * Return : A pointer to the modified string
+ */
+char *leet(char *str);
+
 #endif
