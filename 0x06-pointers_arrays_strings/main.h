@@ -2,6 +2,14 @@
 #define MAIN_H
 
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ */
+int _putchar(char c);
+
+/**
  * _strcat - Concatenate two strings
  * @src: The string to be appended
  * @dest: The string to append to it
@@ -85,5 +93,10 @@ char *leet(char *str);
  */
 char *rot13(char *str);
 
+/**
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
+ */
+void print_number(int n);
 
 #endif
