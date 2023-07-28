@@ -111,5 +111,12 @@ void print_number(int n);
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
+/**
+ * print_buffer - Print a buffer
+ * @b: A pointer to the buffer
+ * @size: The number of bytes to be printed
+ * Return: void
+ */
+void print_buffer(char *b, int size);
 
 #endif
