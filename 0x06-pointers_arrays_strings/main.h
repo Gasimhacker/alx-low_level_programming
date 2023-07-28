@@ -99,4 +99,17 @@ char *rot13(char *str);
  */
 void print_number(int n);
 
+/**
+ * infinite_add - Add two numbers
+ * @n1: The string that contains the first number
+ * @n2: The string that contains the second number
+ * @r: The buffer that will store the result
+ * @size_r: The buffer size
+ *
+ * Return: Apointer to the result if r can
+ *	   store the result, 0 otherwise
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+
 #endif
