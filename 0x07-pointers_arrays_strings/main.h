@@ -51,4 +51,16 @@ char *_strchr(char *s, char c);
  */
 unsigned int _strspn(char *s, char *accept);
 
+/**
+ * _strpbrk - Search for any of a set of bytes
+ * @s: The string to be searched
+ * @accept: The substring that should contain a byte in s
+ *
+ * Return: A pointer to the byte in s that matches
+ *	   one of the bytes in accept,or NULL if
+ *	   no such byte is found
+ */
+char *_strpbrk(char *s, char *accept);
+
+
 #endif
