@@ -40,5 +40,15 @@ char *_memcpy(char *dest, char *src, unsigned int n);
  */
 char *_strchr(char *s, char c);
 
+/**
+ * _strspn - Git the length of a prefix substring
+ * @s: The string to be searched
+ * @accept: The substring that should be in s
+ *
+ * Return: The number of bytes in the initial
+ *	   segment of s which consist
+ *	   only of bytes from accept
+ */
+unsigned int _strspn(char *s, char *accept);
 
 #endif
