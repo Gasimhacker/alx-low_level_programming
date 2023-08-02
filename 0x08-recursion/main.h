@@ -68,5 +68,14 @@ int _sqrt_recursion(int n);
  */
 int is_prime_number(int n);
 
+/**
+ * is_palindrome - Check if the string is a palindrome
+ * @s: The string to be checked
+ *
+ * Return: If the string is a palindrome - 1
+ *	   If the string is not a palindrome  - 0
+ */
+int is_palindrome(char *s);
+
 
 #endif
