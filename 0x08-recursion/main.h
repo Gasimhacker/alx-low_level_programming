@@ -51,5 +51,14 @@ int factorial(int n);
  */
 int _pow_recursion(int x, int y);
 
+/**
+ * _sqrt_recursion - Return the natural
+ *		     square root of a number
+ * @n: The number to calculate the square root of
+ *
+ * Return: The natural square root of n, -1 otherwise
+ */
+int _sqrt_recursion(int n);
+
 
 #endif
