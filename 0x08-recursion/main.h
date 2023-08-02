@@ -25,4 +25,13 @@ void _puts_recursion(char *s);
  */
 void _print_rev_recursion(char *s);
 
+/**
+ * _strlen_recursion - Return the length of a string
+ * @s: The string to calculate its length
+ *
+ * Return: The length of the string
+ */
+int _strlen_recursion(char *s);
+
+
 #endif
