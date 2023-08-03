@@ -77,5 +77,14 @@ int is_prime_number(int n);
  */
 int is_palindrome(char *s);
 
+/**
+ * wildcmp - Compares two strings, considering wildcard characters.
+ * @s1: The first string to be compared.
+ * @s2: The second string to be compared - may contain wildcards.
+ *
+ * Return: If the strings can be considered identical - 1.
+ *	   Otherwise - 0.
+ */
+int wildcmp(char *s1, char *s2);
 
 #endif
