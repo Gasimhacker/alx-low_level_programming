@@ -7,8 +7,6 @@
  */
 int strlen_no_wilds(char *str)
 {
-	int len = 0;
-
 	if (*str == '\0')
 		return (0);
 
