@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strlen - Calculate the length of the string
  * @str: The string to calculate its length
@@ -9,7 +10,7 @@ unsigned int _strlen(char *str)
 {
 	unsigned int len = 0;
 
-	while (*str++)
+	while (str && *str++)
 		len++;
 
 	return (len);
