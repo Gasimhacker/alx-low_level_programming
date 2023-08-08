@@ -30,5 +30,14 @@ char *_strdup(char *str);
  */
 char *str_concat(char *s1, char *s2);
 
+/**
+ * alloc_grid - Create a 2d array of zeros
+ * @width: The width of the array
+ * @height: The height of the array
+ *
+ * Return: A pointer to the 2d array, or NULL if it fails
+ */
+int **alloc_grid(int width, int height);
+
 
 #endif
