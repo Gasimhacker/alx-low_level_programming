@@ -39,5 +39,14 @@ char *str_concat(char *s1, char *s2);
  */
 int **alloc_grid(int width, int height);
 
+/**
+ * free_grid - Free a 2d array of that was created by alloc_grid function
+ * @grid: A pointer to the created 2d array
+ * @height: The height of the array
+ *
+ * Return: Void
+ */
+void free_grid(int **grid, int height);
+
 
 #endif
