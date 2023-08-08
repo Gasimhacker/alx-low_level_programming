@@ -11,5 +11,14 @@
  */
 char *create_array(unsigned int size, char c);
 
+/**
+ * _strdup - Copy a string given as a parameter into
+ *		  a newly allocated memory space
+ * @str: The string to be copied
+ *
+ * Return: A pointer to the duplicated string, NULL otherwise
+ */
+char *_strdup(char *str);
+
 
 #endif
