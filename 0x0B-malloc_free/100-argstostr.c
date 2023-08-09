@@ -3,7 +3,7 @@
  * argstostr - Concatenate all the arguments of the program into
  *		  a newly allocated memory space
  * @ac: The number of arguments passed
- * @av: An array of pointers 
+ * @av: An array of pointers
  *
  * Return: A pointer to the concatenated string, NULL otherwise
 */
