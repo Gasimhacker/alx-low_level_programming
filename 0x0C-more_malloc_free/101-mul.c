@@ -60,7 +60,7 @@ void mul(char *s1, char *s2, int len1, int len2, int *result)
 {
 	int i, digit1, digit2, carry;
 
-	for (i = 0; i <= len1 + len2; i++)
+	for (i = 0; i < len1 + len2; i++)
 		result[i] = 0;
 
 	for (len1 = len1 - 1; len1 >= 0; len1--)
@@ -90,7 +90,7 @@ void print_result(int *result, int len)
 {
 	int i, a = 0;
 
-	for (i = 0; i < len - 1; i++)
+	for (i = 0; i < len; i++)
 	{
 		if (result[i])
 			a = 1;
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	len = len1 + len2 + 1;
+	len = len1 + len2;
 
 	result = malloc(sizeof(int) * len);
 	if (!result)
