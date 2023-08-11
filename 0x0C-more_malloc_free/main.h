@@ -79,19 +79,4 @@ int *array_range(int min, int max);
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
-/**
- * main - Multiply two positive numbers and print the result
- *	  num1 and num2 should only be composed of digits. If not,
- *	  or if the number of arguments is incorrect:
- *	  print "Error", followed by a new line,
- *	  and exit with a status of 98
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: If the multiplication is Successful - 0
- *	   If malloc fails - 1
- */
-int main(int argc, char *argv[]);
-
-
 #endif
