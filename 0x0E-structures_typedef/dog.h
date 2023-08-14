@@ -17,6 +17,10 @@ struct dog
 	float age;
 };
 
+/**
+ * dog_t - Define a new type called dog_t for type struct dog
+ */
+typedef struct dog dog_t;
 
 /**
  * init_dog - Initialize a variable of type struct dog
@@ -26,6 +30,7 @@ struct dog
  * @owner: The dog's owner name
  *
  * Return: void
+ *
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
