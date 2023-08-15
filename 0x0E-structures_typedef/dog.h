@@ -53,4 +53,13 @@ void print_dog(struct dog *d);
  */
 dog_t *new_dog(char *name, float age, char *owner);
 
+/**
+ * free_dog - Free the memory allocated for dog
+ * @d: The dog to be freed
+ *
+ * Return: void
+ */
+void free_dog(dog_t *d);
+
+
 #endif
