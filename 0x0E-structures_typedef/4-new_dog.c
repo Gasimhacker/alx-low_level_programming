@@ -5,13 +5,14 @@
  * _strlen - Calculate the length of a string
  * @str: The string to calculate its length
  *
- * Return: The length of the string
+ * Return: The length of the string,
+ *	   if NULL or empty string is passed - 0
  */
 int _strlen(char *str)
 {
 	int len = 0;
 
-	while (*str++)
+	while (str && *str++)
 		len++;
 
 	return (len);
@@ -52,7 +53,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int name_len = _strlen(name), owner_len = _strlen(owner);
 	dog_t *my_dog;
 
-	my_dog = malloc(sizeof(my_dog));
+	my_dog = malloc(sizeof(dog_t));
 
 	if (my_dog == NULL)
 		return (NULL);
