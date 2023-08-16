@@ -5,7 +5,8 @@
  * @array: The array to iterate the execution
  *	   on each of its elements
  * @size: The size of the array
- * @action: The function that should be executed on the array's elements
+ * @action: A pointer to the function that should
+ *	    be executed on the array's elements
  *
  * Return: void
  */
