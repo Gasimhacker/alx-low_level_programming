@@ -6,7 +6,7 @@
  * print_name - Print the given name as specified
  *		by the function "f"
  * @name: The name to print
- * @f: The function that specifies how to print the name
+ * @f: A pointer to the function that specifies how to print the name
  *
  * Return: void
  */
@@ -23,6 +23,5 @@ void print_name(char *name, void (*f)(char *));
  * Return: void
  */
 void array_iterator(int *array, size_t size, void (*action)(int));
-
 
 #endif
