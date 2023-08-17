@@ -18,5 +18,13 @@ int sum_them_all(const unsigned int n, ...);
  */
 void print_numbers(const char *separator, const unsigned int n, ...);
 
+/**
+ * print_strings - Print all of passed strings
+ * @separator: The string to be printed between strings
+ * @n: The number of strings passed to the function
+ *
+ * Return: void
+ */
+void print_strings(const char *separator, const unsigned int n, ...);
 
 #endif
