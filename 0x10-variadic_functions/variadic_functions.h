@@ -9,4 +9,14 @@
  */
 int sum_them_all(const unsigned int n, ...);
 
+/**
+ * print_numbers - Print all of passed numbers
+ * @separator: The string to be printed between numbers
+ * @n: The number of integers passed to the function
+ *
+ * Return: void
+ */
+void print_numbers(const char *separator, const unsigned int n, ...);
+
+
 #endif
