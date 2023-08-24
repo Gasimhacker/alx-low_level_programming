@@ -56,5 +56,14 @@ size_t list_len(const list_t *h);
  */
 list_t *add_node(list_t **head, const char *str);
 
+/**
+ * add_node_end - Add a new node at the end of a linked list
+ * @head: A pointer to a pointer to the first node in the linked list
+ * @str: The string to put inside the node
+ *
+ * Return: A pointer to the new node in the linked list
+ */
+list_t *add_node_end(list_t **head, const char *str);
+
 
 #endif /* LIST_H */
