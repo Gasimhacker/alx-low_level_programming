@@ -37,4 +37,12 @@ typedef struct list_s
  */
 size_t print_list(const list_t *h);
 
+/**
+ * list_len - Calculates the number of nodes in a linked list
+ * @h: A pointer to the first node in the linked list
+ *
+ * Return: The number of nodes
+ */
+size_t list_len(const list_t *h);
+
 #endif /* LIST_H */
