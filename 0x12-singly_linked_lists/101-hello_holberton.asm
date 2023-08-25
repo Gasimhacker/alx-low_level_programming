@@ -15,4 +15,4 @@ main:
 
 	section  .data
 
-	msg: db `Hello, Holberton\n`, 10
+	msg: db `Hello, Holberton\n`, 0
