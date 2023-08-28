@@ -95,5 +95,15 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
  */
 int sum_listint(listint_t *head);
 
+/**
+ * insert_nodeint_at_index - Add a new node at the given index
+ * @head: A pointer to a pointer to the head of the linked list
+ * @idx: The index of the list where the new node should be added
+ * @n: The integer to put inside the new node
+ *
+ * Return: The address of the new element, or NULL if it failed
+ */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+
 
 #endif /* LISTS_H */
