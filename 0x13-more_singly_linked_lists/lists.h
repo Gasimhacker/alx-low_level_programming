@@ -122,5 +122,13 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
  */
 listint_t *reverse_listint(listint_t **head);
 
+/**
+ * print_listint_safe - Print all the elemnts of listint_t list
+ * @h: A pointer to the head of the linked list
+ *
+ * Return: The number of nodes in the linked list
+ *	   If the function fails, exit the program with status 98
+ */
+size_t print_listint_safe(const listint_t *h);
 
 #endif /* LISTS_H */
