@@ -1,23 +1,51 @@
 #include "lists.h"
 
 /**
- * check_next - Check if the next node is not a loop
- * @is_smaller: If this is set to 1
- *		the function the next node's address should be smaller than
- *		the current node's address
- * @is_greater: If this is set to 1
- *		the function the next node's address should be greater than
- *		the current node's address
- * @h: A pointer to a node in the linked list that we want to check
+ * looped_listint_len - Counts the number of unique nodes
+ *                      in a looped listint_t linked list.
+ * @head: A pointer to the head of the listint_t to check.
  *
- * Return: 1 If the check is true, 0 otherwise
+ * Return: If the list is not looped - 0.
+ *         Otherwise - the number of unique nodes in the list.
  */
-char check_next(char is_smaller, char is_greater, const listint_t *h)
+size_t looped_listint_len(const listint_t *head)
 {
-	if ((is_smaller && h->next < h) || (is_greater && h->next > h))
-		return (1);
-	else
+	const listint_t *tortoise, *hare;
+	size_t nodes = 1;
+
+	if (head == NULL || head->next == NULL)
 		return (0);
+
+	tortoise = head->next;
+	hare = (head->next)->next;
+
+	while (hare)
+	{
+		if (tortoise == hare)
+		{
+			tortoise = head;
+			while (tortoise != hare)
+			{
+				nodes++;
+				tortoise = tortoise->next;
+				hare = hare->next;
+			}
+
+			tortoise = tortoise->next;
+			while (tortoise != hare)
+			{
+				nodes++;
+				tortoise = tortoise->next;
+			}
+
+			return (nodes);
+		}
+
+		tortoise = tortoise->next;
+		hare = (hare->next)->next;
+	}
+
+	return (0);
 }
 
 
@@ -30,28 +58,30 @@ char check_next(char is_smaller, char is_greater, const listint_t *h)
  */
 size_t print_listint_safe(const listint_t *h)
 {
-	size_t num_nodes = 0;
-	char is_smaller = 0, is_greater = 0;
+	size_t num_nodes, i;
 
-	if (h->next < h)
-		is_smaller = 1;
-	else if (h->next > h)
-		is_greater = 1;
+	num_nodes = looped_listint_len(h);
 
-	while (h)
+	if (num_nodes == 0)
 	{
-		printf("[%p] %d\n", (void *)h, h->n);
-
-		if (check_next(is_smaller, is_greater, h))
+		for (; h != NULL; num_nodes++)
 		{
+			printf("[%p] %d\n", (void *)h, h->n);
 			h = h->next;
-			num_nodes++;
-		}
-		else
-		{
-			printf("-> [%p] %d\n", (void *)(h->next), h->next->n);
-			return (98);
 		}
 	}
+
+	else
+	{
+		for (i = 0; i < num_nodes; i++)
+		{
+			printf("[%p] %d\n", (void *)h, h->n);
+			h = h->next;
+		}
+
+		printf("-> [%p] %d\n", (void *)h, h->n);
+		exit(98);
+	}
+
 	return (num_nodes);
 }
