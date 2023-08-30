@@ -141,5 +141,12 @@ size_t print_listint_safe(const listint_t *h);
  */
 size_t free_listint_safe(listint_t **h);
 
+/**
+ * find_listint_loop - finds the loop in a linked list
+ * @head: linked list to search for
+ *
+ * Return: address of the node where the loop starts, or NULL
+ */
+listint_t *find_listint_loop(listint_t *head);
 
 #endif /* LISTS_H */
