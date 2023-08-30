@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
+
 
 /**
  * struct listint_s - singly linked list
@@ -130,5 +132,14 @@ listint_t *reverse_listint(listint_t **head);
  *	   If the function fails, exit the program with status 98
  */
 size_t print_listint_safe(const listint_t *h);
+
+/**
+ * free_listint_safe - Free all the elemnts of listint_t list
+ * @h: A pointer to a pointer to the head of the linked list
+ *
+ * Return: The size of the list that was free’d
+ */
+size_t free_listint_safe(listint_t **h);
+
 
 #endif /* LISTS_H */
