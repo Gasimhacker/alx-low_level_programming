@@ -29,4 +29,13 @@ unsigned int binary_to_uint(const char *b);
  */
 void print_binary(unsigned long int n);
 
+/**
+ * git_bit - Return the value of a bit at a given index
+ * @n: The number to return the value of its bit at a given index
+ * @index: The index, starting from 0 of the bit you want to get
+ *
+ * Return: The value of the bit at index index or -1 if an error occured
+ */
+int get_bit(unsigned long int n, unsigned int index);
+
 #endif /* MAIN_H */
