@@ -9,7 +9,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int i, start_flag = 0;
+	unsigned long int i;
+	char start_flag = 0;
 
 	if (n == 0 || n == 1)
 	{
@@ -17,7 +18,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (i = 1 << 31; i > 0; i >>= 1)
+	for (i = 1 << 63; i > 0; i >>= 1)
 	{
 		if (n & i)
 		{
