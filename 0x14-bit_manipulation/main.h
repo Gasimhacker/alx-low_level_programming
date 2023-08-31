@@ -38,4 +38,13 @@ void print_binary(unsigned long int n);
  */
 int get_bit(unsigned long int n, unsigned int index);
 
+/**
+ * set_bit - Set the value of a bit at a given index to 1
+ * @n: The number to set the value of its bit at a given index
+ * @index: The index, starting from 0 of the bit you want to set
+ *
+ * Return: 1 if it worked, or -1 if an error occurred
+ */
+int set_bit(unsigned long int *n, unsigned int index);
+
 #endif /* MAIN_H */
