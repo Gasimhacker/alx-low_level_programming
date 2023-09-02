@@ -71,6 +71,9 @@ size_t calc_nodes(const listint_t *h)
 
 	if (tortoise == NULL)
 		return (nodes);
+	/* A loop of 2 nodes */
+	else if (nodes == 2)
+		return (nodes);
 
 	nodes = calc_uniq_nodes(h, hare);
 	return (nodes);
