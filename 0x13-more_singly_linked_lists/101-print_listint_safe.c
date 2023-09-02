@@ -49,7 +49,7 @@ size_t calc_nodes(const listint_t *h)
 	size_t nodes = 1;
 
 	if (h == NULL)
-		exit(98);
+		return (0);
 
 	if (h == h->next)
 		return (1);
