@@ -1,40 +1,105 @@
 #include "lists.h"
 
 /**
- * free_listint_safe - frees a linked list
- * @h: pointer to the first node in the linked list
+ * calc_unique_nodes - Calculate the number of unique
+ *		       nodes of a looped linked list
+ * @h: A pointer to the head of the linked list
+ * @hare: A pointer to the meeting point of the slow and fast pointers
  *
- * Return: number of elements in the freed list
+ * Return: The number of uniqe nodes of a looped linked list
+ */
+size_t calc_unique_nodes(listint_t *h, listint_t *hare)
+{
+	listint_t *last_node, *tortoise;
+	size_t nodes = 2;
+
+	tortoise = h->next;
+	last_node = hare;
+	hare = hare->next;
+
+	while (tortoise != hare)
+	{
+		tortoise = tortoise->next;
+		last_node = hare;
+		hare = hare->next;
+	}
+
+	tortoise = h->next;
+
+	while (tortoise != last_node)
+	{
+		nodes++;
+		tortoise = tortoise->next;
+	}
+
+	return (nodes);
+
+}
+
+
+/**
+ * calculate_nodes - Calculate the number of unique nodes in a linked list
+ * @h: A pointer to the head of the linked list
+ *
+ * Return: The number of uniqe nodes of a linked list
+ */
+size_t calculate_nodes(listint_t *h)
+{
+	listint_t *tortoise, *hare;
+	size_t nodes = 1;
+
+	if (h == NULL)
+		return (0);
+
+	if (h == h->next)
+		return (1);
+
+	tortoise = h->next;
+	if (h->next)
+		hare = h->next->next;
+
+	while (tortoise && tortoise != hare)
+	{
+		nodes++;
+		tortoise = tortoise->next;
+
+		if (hare && hare->next)
+			hare = hare->next->next;
+		else if (hare)
+			hare = hare->next;
+	}
+
+	if (tortoise == NULL)
+		return (nodes);
+	/* A loop of 2 nodes */
+	else if (nodes == 2)
+		return (nodes);
+
+	nodes = calc_unique_nodes(h, hare);
+	return (nodes);
+
+}
+
+/**
+ * free_listint_safe - Print all the elemnts of listint_t list
+ * @h: A pointer to a pointer to the head of the linked list
+ *
+ * Return: The number of nodes in the list that was free’d
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t len = 0;
-	int diff;
-	listint_t *temp;
+	size_t num_nodes = calculate_nodes(*h);
+	size_t i;
+	listint_t *tmp;
 
-	if (!h || !*h)
-		return (0);
-
-	while (*h)
+	for (i = 0; i < num_nodes; i++)
 	{
-		diff = *h - (*h)->next;
-		if (diff > 0)
-		{
-			temp = (*h)->next;
-			free(*h);
-			*h = temp;
-			len++;
-		}
-		else
-		{
-			free(*h);
-			*h = NULL;
-			len++;
-			break;
-		}
+		tmp = (*h)->next;
+		free(*h);
+		*h = tmp;
 	}
 
 	*h = NULL;
 
-	return (len);
+	return (num_nodes);
 }
