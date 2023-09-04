@@ -18,4 +18,15 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters);
 
+/**
+ * create_file - Create a text file
+ * @filename: The name of the file to create
+ * @text_content: A NULL terminated string to write to the file
+ *
+ * Return: 1 - On success
+ *	  -1 - On failure (If filename is NULL,file can not be created,
+ *	  file can not be written,write “fails”, etc…)
+ */
+int create_file(const char *filename, char *text_content);
+
 #endif /* MAIN_H */
