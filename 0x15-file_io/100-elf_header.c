@@ -262,7 +262,7 @@ void print_entry_point(Elf64_Addr e_entry, unsigned char *e_ident)
 	}
 
 	if (e_ident[EI_CLASS] == ELFCLASS32)
-		printf("%#lx\n", e_entry);
+		printf("%#x\n", (unsigned int)e_entry);
 	else
 		printf("%#lx\n", e_entry);
 }
