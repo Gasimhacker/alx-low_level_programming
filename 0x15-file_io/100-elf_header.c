@@ -139,10 +139,10 @@ void print_version(unsigned char *e_ident)
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
-			printf("1 (current)\n");
+			printf("%d (current)\n", e_ident[EI_VERSION]);
 			break;
 		default:
-			printf("<Invalid version: %x>\n", e_ident[EI_VERSION]);
+			printf("\n");
 
 	}
 }
@@ -183,7 +183,7 @@ void print_osabi(unsigned char *e_ident)
 			printf("UNIX - FreeBSD\n");
 			break;
 		case ELFOSABI_TRU64:
-			printf("UNIX - TRU64 UNIX\n");
+			printf("UNIX - TRU64\n");
 			break;
 		case ELFOSABI_ARM:
 			printf("ARM\n");
@@ -231,7 +231,7 @@ void print_type(uint16_t e_type, unsigned char *e_ident)
 	switch (e_type)
 	{
 		case ET_NONE:
-			printf("none\n");
+			printf("NONE (none)\n");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)\n");
