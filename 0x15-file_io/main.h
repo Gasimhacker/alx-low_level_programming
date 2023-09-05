@@ -5,6 +5,9 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <elf.h>
+
+
 
 /**
  * read_textfile - Read a text file and print it to the POSIX standard output
