@@ -293,13 +293,13 @@ int main(int argc, char *argv[])
 
 	if (argc < 2)
 		handle_error("You should pass only one file no more no less");
-	header = malloc(sizeof(Elf64_Ehdr));
 
 	o = open(argv[1], O_RDONLY);
 
 	if (o == -1)
 		handle_error("Cannot open the file");
 
+	header = malloc(sizeof(Elf64_Ehdr));
 	if (!header)
 	{
 		close_elf(o);
