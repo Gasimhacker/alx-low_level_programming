@@ -217,7 +217,7 @@ void print_abi_version(unsigned char *e_ident)
 void print_type(uint16_t e_type, unsigned char *e_ident)
 {
 
-	if(e_ident[EI_DATA] == ELFDATA2MSB)
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
 
 	printf("  Type:                              ");
@@ -263,7 +263,7 @@ void print_entry_point(Elf64_Addr e_entry, unsigned char *e_ident)
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
 			  ((e_entry >> 8) & 0xFF00FF);
 		e_entry = (e_entry << 16) | (e_entry >> 16);
-	 }
+	}
 
 	if (e_ident[EI_CLASS] == ELFCLASS32)
 		printf("%#x\n", (unsigned int)e_entry);
