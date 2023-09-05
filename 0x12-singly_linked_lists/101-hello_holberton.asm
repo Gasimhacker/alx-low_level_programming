@@ -1,8 +1,7 @@
 	global main
 	extern printf
 
-
-	section  .text
+	section	.text
 main:
 
 	mov rdi, msg		;	The address of the string to print
@@ -13,7 +12,6 @@ main:
 	mov rax, 0		;
 	ret			;	return (0)
 
-
-	section  .data
+	section	.data
 
 	msg: db `Hello, Holberton`, 10
