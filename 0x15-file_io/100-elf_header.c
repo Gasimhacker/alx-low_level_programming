@@ -281,7 +281,7 @@ int main(int argc, char *argv[])
 	int o, r;
 	Elf64_Ehdr *header;
 
-	if (argc != 2)
+	if (argc < 2)
 		handle_error("You should pass only one file no more no less");
 	header = malloc(sizeof(Elf64_Ehdr));
 
