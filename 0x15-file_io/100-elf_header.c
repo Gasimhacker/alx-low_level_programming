@@ -26,7 +26,7 @@ void check_elf(unsigned char *e_ident)
 	    e_ident[EI_MAG2] != 'L' ||
 	    e_ident[EI_MAG3] != 'F')
 	{
-		handle_error("The file is not an ELF file");
+		handle_error("Error: Not an ELF file");
 	}
 
 }
