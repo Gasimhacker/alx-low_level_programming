@@ -210,11 +210,15 @@ void print_abi_version(unsigned char *e_ident)
  * print_type - Print the type of the elf file
  * @e_type: A value that will be compared with one of the
  *	    macros to identify the type
+ * @e_ident: An array holding the needed data
  *
  * Return: void
  */
-void print_type(uint16_t e_type)
+void print_type(uint16_t e_type, unsigned char *e_ident)
 {
+
+	if(e_ident[EI_DATA] == ELFDATA2MSB)
+		e_type >>= 8;
 
 	printf("  Type:                              ");
 
@@ -257,9 +261,9 @@ void print_entry_point(Elf64_Addr e_entry, unsigned char *e_ident)
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
-			  ((e_entry >> 8) & 0xFF00FF00);
+			  ((e_entry >> 8) & 0xFF00FF);
 		e_entry = (e_entry << 16) | (e_entry >> 16);
-	}
+	 }
 
 	if (e_ident[EI_CLASS] == ELFCLASS32)
 		printf("%#x\n", (unsigned int)e_entry);
@@ -312,7 +316,7 @@ int main(int argc, char *argv[])
 	print_version(header->e_ident);
 	print_osabi(header->e_ident);
 	print_abi_version(header->e_ident);
-	print_type(header->e_type);
+	print_type(header->e_type, header->e_ident);
 	print_entry_point(header->e_entry, header->e_ident);
 	free(header);
 	close_elf(o);
