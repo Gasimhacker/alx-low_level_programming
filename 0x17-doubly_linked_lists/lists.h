@@ -82,4 +82,17 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
  */
 int sum_dlistint(dlistint_t *head);
 
+/**
+ * insert_dnodeint_at_index - Insert a new node at the given position
+ * @h: A pointer to the head of the list
+ * @idx: The index where the new node should be added
+ * @n: The data to be put in the index idx
+ *
+ * Return: The address of the new node,
+ *	   or NULL if :
+ *	   1-it failed
+ *	   2-it is not possible to add the new node at index idx
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+
 #endif /* LISTS_H */
