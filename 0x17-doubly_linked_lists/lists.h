@@ -3,6 +3,8 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -35,5 +37,14 @@ size_t print_dlistint(const dlistint_t *h);
  * Return: The number of nodes
  */
 size_t dlistint_len(const dlistint_t *h);
+
+/**
+ * add_dnodeint - Add a new node at the biginning of a linked list
+ * @head: A pointer to a pointer to the first node in the linked list
+ * @n: The string to put inside the node
+ *
+ * Return: A pointer to the head of the linked list
+ */
+dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
 #endif /* LISTS_H */
