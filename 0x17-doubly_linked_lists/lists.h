@@ -47,4 +47,13 @@ size_t dlistint_len(const dlistint_t *h);
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
+/**
+ * add_dnodeint_end - Add a new node at the end of a linked list
+ * @head: A pointer to a pointer to the first node in the linked list
+ * @n: The number to put inside the new node
+ *
+ * Return: A pointer to the new element, or NULL if it failed
+ */
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+
 #endif /* LISTS_H */
