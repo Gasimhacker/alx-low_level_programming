@@ -56,4 +56,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n);
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 
+/**
+ * free_dlistint - Free a dlistint_t list
+ * @head: A pointer to the linked list to be freed
+ *
+ * Return: void
+ */
+void free_dlistint(dlistint_t *head);
+
 #endif /* LISTS_H */
