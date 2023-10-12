@@ -41,7 +41,7 @@ size_t dlistint_len(const dlistint_t *h);
 /**
  * add_dnodeint - Add a new node at the biginning of a linked list
  * @head: A pointer to a pointer to the first node in the linked list
- * @n: The string to put inside the node
+ * @n: The number to put inside the node
  *
  * Return: A pointer to the head of the linked list
  */
