@@ -28,4 +28,12 @@ typedef struct dlistint_s
  */
 size_t print_dlistint(const dlistint_t *h);
 
+/**
+ * dlistint_len - Calculates the number of nodes in a linked list
+ * @h: A pointer to the first node in the linked list
+ *
+ * Return: The number of nodes
+ */
+size_t dlistint_len(const dlistint_t *h);
+
 #endif /* LISTS_H */
