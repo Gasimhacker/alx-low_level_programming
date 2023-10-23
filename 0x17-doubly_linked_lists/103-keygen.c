@@ -11,32 +11,33 @@
 int main(int argc, char *argv[])
 {
 	unsigned int i, b;
-	size_t len, add;
+	size_t len, ret;
 	char *l = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
-	char p[7] = "      ";
+	char *name, p[7] = "      ";
 
 	if (argc != 2)
 	{
 		printf("Correct usage: ./keygen5 username\n");
 		return (1);
 	}
-	len = strlen(argv[1]);
+	name = argv[1];
+	len = strlen(name);
 	p[0] = l[(len ^ 59) & 63];
-	for (i = 0, add = 0; i < len; i++)
-		add += argv[1][i];
-	p[1] = l[(add ^ 79) & 63];
+	for (i = 0, ret = 0; i < len; i++)
+		ret += name[i];
+	p[1] = l[(ret ^ 79) & 63];
 	for (i = 0, b = 1; i < len; i++)
-		b *= argv[1][i];
+		b *= name[i];
 	p[2] = l[(b ^ 85) & 63];
-	for (b = argv[1][0], i = 0; i < len; i++)
-		if ((char)b <= argv[1][i])
-			b = argv[1][i];
+	for (b = name[0], i = 0; i < len; i++)
+		if ((char)b < name[i])
+			b = name[i];
 	srand(b ^ 14);
 	p[3] = l[rand() & 63];
 	for (b = 0, i = 0; i < len; i++)
-		b += argv[1][i] * argv[1][i];
+		b += name[i] * name[i];
 	p[4] = l[(b ^ 239) & 63];
-	for (b = 0, i = 0; (char)i < argv[1][0]; i++)
+	for (b = 0, i = 0; (char)i < name[0]; i++)
 		b = rand();
 	p[5] = l[(b ^ 229) & 63];
 	printf("%s\n", p);
