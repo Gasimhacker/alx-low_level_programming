@@ -76,5 +76,14 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
+/**
+ * hash_table_get - Retrieve an element from the hash table
+ * @ht: A pointer to the hash table
+ * @key: The key
+ *
+ * Return: On success - the value associated with the element
+ *	   On failure - "NULL"
+ */
+char *hash_table_get(const hash_table_t *ht, const char *key);
 
 #endif /* HASH_TABLE_H */
