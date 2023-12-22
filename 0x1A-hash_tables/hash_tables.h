@@ -5,7 +5,7 @@
 
 /* "Includes" */
 #include <stdlib.h>
-
+#include <string.h>
 
 
 
@@ -64,6 +64,17 @@ unsigned long int hash_djb2(const unsigned char *str);
  *	   should be stored in the array of the hash table
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
+/**
+ * hash_table_set - Add an element to the hash table
+ * @ht: A pointer to the hash table
+ * @key: The key - it cannot be an empty string
+ * @value: The value value associated with the key
+ *
+ * Return: On success - 1
+ *	   On failure - 0
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
 
 #endif /* HASH_TABLE_H */
