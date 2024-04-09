@@ -36,5 +36,15 @@ int binary_search(int *array, size_t size, int value);
  *	   Otherwise - "-1"
  */
 int jump_search(int *array, size_t size, int value);
+/**
+ * interpolation_search - The interpolation search algorithm
+ * @array: A pointer to the first element of the array to search in
+ * @size: The number of elements in array
+ * @value: The value to search for
+ *
+ * Return: If the value is pesent - The index where value is located
+ *	   Otherwise - "-1"
+ */
+int interpolation_search(int *array, size_t size, int value);
 
 #endif /* SEARCH_ALGOS_H */
