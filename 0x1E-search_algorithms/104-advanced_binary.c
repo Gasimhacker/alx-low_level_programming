@@ -17,6 +17,36 @@ void print_array(int *array, size_t size)
 	printf("%d\n", array[i]);
 }
 
+
+/**
+ * recursive_binary - The advanced binary search algorithm
+ * @array: A pointer to the first element of the array to search in
+ * @l: The Lower bound of the binary search
+ * @r: The Upper bound of the binary search
+ * @value: The value to search for
+ *
+ * Return: If the value is pesent - The index where value is located
+ *	   Otherwise - "-1"
+ */
+int recursive_binary(int *array, size_t l, size_t r, int value)
+{
+	size_t mid;
+
+	print_array(array + l, r - l);
+
+	mid = (l + r) / 2;
+	if (l == r && array[l] == value)
+		return (l);
+	else if (l == r)
+		return (-1);
+
+	if (array[mid] < value)
+		l = mid + 1;
+	else
+		r = mid;
+	return (recursive_binary(array, l, r, value));
+}
+
 /**
  * advanced_binary - The advanced binary search algorithm
  * @array: A pointer to the first element of the array to search in
@@ -28,21 +58,7 @@ void print_array(int *array, size_t size)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t l = 0, r = size - 1, mid;
-
 	if (array == NULL)
 		return (-1);
-	while (l < r)
-	{
-		mid = (l + r) / 2;
-
-		print_array(array + l, r - l);
-		if (array[mid] < value)
-			l = mid + 1;
-		else
-			r = mid;
-	}
-	if (mid < size && array[mid] == value)
-		return (mid);
-	return (-1);
+	return (recursive_binary(array, 0, size - 1, value));
 }
