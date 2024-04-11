@@ -34,16 +34,20 @@ int recursive_binary(int *array, size_t l, size_t r, int value)
 
 	print_array(array + l, r - l);
 
-	mid = (l + r) / 2;
-	if (l == r && array[l] == value)
-		return (l);
-	else if (l == r)
+	if (l == r && array[l] != value)
 		return (-1);
+	mid = (l + r) / 2;
 
 	if (array[mid] < value)
 		l = mid + 1;
+	else if (array[mid] > value)
+		r = mid - 1;
 	else
+	{
+		if (mid == 0 || array[mid - 1] != array[mid])
+			return (mid);
 		r = mid;
+	}
 	return (recursive_binary(array, l, r, value));
 }
 
