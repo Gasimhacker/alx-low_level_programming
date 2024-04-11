@@ -16,9 +16,9 @@
  */
 typedef struct listint_s
 {
-    int n;
-    size_t index;
-    struct listint_s *next;
+	int n;
+	size_t index;
+	struct listint_s *next;
 } listint_t;
 /**
  * struct skiplist_s - Singly linked list with an express lane
@@ -32,10 +32,10 @@ typedef struct listint_s
  */
 typedef struct skiplist_s
 {
-    int n;
-    size_t index;
-    struct skiplist_s *next;
-    struct skiplist_s *express;
+	int n;
+	size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
 } skiplist_t;
 
 /* "Functions" */
@@ -112,7 +112,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value);
 /**
  * linear_skip - The jump search algorithm in a skip list
  * @list: A pointer to the head of the list to search in
- * @size: The number of nodes in list
  * @value: The value to search for
  *
  * Return: If the value is pesent - The index where value is located

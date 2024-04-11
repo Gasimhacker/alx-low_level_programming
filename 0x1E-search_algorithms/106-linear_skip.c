@@ -3,7 +3,6 @@
 /**
  * linear_skip - The jump search algorithm in a skip list
  * @list: A pointer to the head of the list to search in
- * @size: The number of nodes in list
  * @value: The value to search for
  *
  * Return: If the value is pesent - The index where value is located
@@ -28,7 +27,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			r = r->next;
 	}
 	printf("Value found between indexes [%ld] and [%ld]\n", l->index, r->index);
-	
+
 	for (; l && l->index <= r->index; l = l->next)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", l->index, l->n);
