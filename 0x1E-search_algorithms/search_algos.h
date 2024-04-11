@@ -4,6 +4,22 @@
 /* "Header files" */
 #include <stdio.h>
 
+/* "Structs" */
+/**
+ * struct listint_s - singly linked list
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ *
+ * Description: singly linked list node structure
+ */
+typedef struct listint_s
+{
+    int n;
+    size_t index;
+    struct listint_s *next;
+} listint_t;
 
 /* "Functions" */
 /**
@@ -66,5 +82,15 @@ int exponential_search(int *array, size_t size, int value);
  *	   Otherwise - "-1"
  */
 int advanced_binary(int *array, size_t size, int value);
+/**
+ * jump_list - The jump search algorithm in a singly linked list
+ * @list: A pointer to the head of the list to search in
+ * @size: The number of nodes in list
+ * @value: The value to search for
+ *
+ * Return: If the value is pesent - The index where value is located
+ *	   Otherwise - "-1"
+ */
+listint_t *jump_list(listint_t *list, size_t size, int value);
 
 #endif /* SEARCH_ALGOS_H */
