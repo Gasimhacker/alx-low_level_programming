@@ -1,6 +1,13 @@
 #include "search_algos.h"
 #include <math.h>
 
+/**
+ * increment - Increment the pointer by specific step
+ * @list: A pointer to the head of the list
+ * @step: The increment step
+ *
+ * Return: The new node after the increment
+ */
 listint_t *increment(listint_t *list, size_t step)
 {
 	size_t i;
