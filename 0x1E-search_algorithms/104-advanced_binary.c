@@ -33,15 +33,15 @@ int recursive_binary(int *array, size_t l, size_t r, int value)
 	size_t mid;
 
 	print_array(array + l, r - l);
-
 	if (l == r && array[l] != value)
 		return (-1);
+
 	mid = l + (r - l) / 2;
 
 	if (array[mid] < value)
 		l = mid + 1;
 	else if (array[mid] > value)
-		r = mid - 1;
+		r = mid;
 	else
 	{
 		if (mid == 0 || array[mid - 1] != array[mid])
